@@ -7,6 +7,7 @@ A professional, high-performance blog platform built with a focus on modern aest
 - **🚀 React + Vite Stack**: Lightning-fast development and build times.
 - **📝 Markdown Focused**: Write posts in standard Markdown with TOML frontmatter.
 - **🔍 Intelligent Search**: Real-time, keyboard-navigable search modal with text highlighting.
+- **💻 Syntax Highlighting**: Automated code block highlighting with Prism and the atomDark theme.
 - **🎨 Premium Aesthetics**: "Nocturnal Purple" design system with glassmorphism, smooth gradients, and deep dark modes.
 - **✨ Animated Hero**: Integrated `@paper-design/shaders-react` Warp shader for a dynamic background.
 - **📱 Ultra-Responsive**: Fluid layout supporting devices from 320px up to 4K displays.

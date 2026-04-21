@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { atomDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import postsData from '../data/posts.json';
 
 export default function PostPage() {
@@ -68,6 +70,30 @@ export default function PostPage() {
           <ReactMarkdown 
             remarkPlugins={[remarkGfm]}
             components={{
+              code({ node, inline, className, children, ...props }) {
+                const match = /language-(\w+)/.exec(className || '');
+                return !inline && match ? (
+                  <SyntaxHighlighter
+                    {...props}
+                    style={atomDark}
+                    language={match[1]}
+                    PreTag="div"
+                    customStyle={{
+                      margin: '1.5em 0',
+                      borderRadius: '8px',
+                      fontSize: '14px',
+                      backgroundColor: '#121212',
+                      border: '1px solid var(--border-color)'
+                    }}
+                  >
+                    {String(children).replace(/\n$/, '')}
+                  </SyntaxHighlighter>
+                ) : (
+                  <code className={className} {...props}>
+                    {children}
+                  </code>
+                );
+              },
               a: ({ href, children }) => {
                 // Determine if the link is internal to the blog
                 // 1. Doesn't start with http/https
