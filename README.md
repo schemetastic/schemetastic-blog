@@ -1,4 +1,4 @@
-# 🟣 Nocturnal Purple Blog
+# Schemetastic Blog
 
 A professional, high-performance blog platform built with a focus on modern aesthetics, responsiveness, and developer experience. Designed and developed using **Paper** with **Antigravity** (AI assisted).
 
