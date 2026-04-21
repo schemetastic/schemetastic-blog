@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/buildIndex.js && vite",
     "build": "node scripts/buildIndex.js && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --host"
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.76",
