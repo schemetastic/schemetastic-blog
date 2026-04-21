@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "node scripts/buildIndex.js && vite",
     "build": "node scripts/buildIndex.js && vite build",
-    "preview": "vite preview --host"
+    "preview": "vite preview",
+    "start": "vite preview --host 0.0.0.0 --port ${PORT:-4173}"
   },
   "dependencies": {
     "@paper-design/shaders-react": "^0.0.76",
@@ -15,9 +16,7 @@
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.24.1",
     "remark-gfm": "^4.0.0",
-    "toml": "^3.0.0"
-  },
-  "devDependencies": {
+    "toml": "^3.0.0",
     "@vitejs/plugin-react": "^4.3.1",
     "vite": "^5.3.3"
   }
